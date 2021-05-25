@@ -21,8 +21,8 @@ langs=af,als,am,an,ang,ar,arz,ast,az,bar,be,bg,bn,br,bs,ca,ceb,ckb,cs,cy,da,de,e
 lr=1e-5
 
 TBS=1024
-#max_sents=16
-max_sents=1
+# max_sents=16
+max_sents=2
 update_freq=$(($TBS/$max_sents/$NGPU))
 
 warmup=2000
