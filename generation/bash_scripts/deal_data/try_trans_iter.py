@@ -51,4 +51,6 @@ if __name__ == "__main__":
         source_lang = args.source_lang
         target_lang = args.target_lang
 
+        print("\n source_file name:", source_file)
+
         main(source_file, target_file, source_lang, target_lang)
