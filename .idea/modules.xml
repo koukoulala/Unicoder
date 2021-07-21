@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Unicoder.iml" filepath="$PROJECT_DIR$/.idea/Unicoder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../covid19_detection/.idea/covid19_detection.iml" filepath="$PROJECT_DIR$/../covid19_detection/.idea/covid19_detection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../py-googletranslation/.idea/py-googletranslation.iml" filepath="$PROJECT_DIR$/../py-googletranslation/.idea/py-googletranslation.iml" />
     </modules>
   </component>
 </project>
