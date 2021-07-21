@@ -15,7 +15,7 @@ def compute_bleus(args, epochs, split):
     ref_folder = args.ref_folder
     for e in epochs:
         fd = os.path.join(args.save_dir, 
-                          "decodes/{}/checkpoint{}/{}".format(args.exp, e, split)) 
+                          "decodes/{}/checkpoint{}/{}".format(args.exp, e, split))
         scores = {}
         for lg in lgs:
             fs = os.path.join(fd, "{}_tgt.{}.hyp".format(lg, split))
@@ -28,6 +28,7 @@ def compute_bleus(args, epochs, split):
                 rfs = rf.readlines()
                 rf.close()
                 if len(hps) == len(rfs):
+                    print("right")
                     cmd = "python -m sacrebleu --force -lc -l {}-{} {} < {}".format(lg, lg, ref, fs)
                     p = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
                     result = p.communicate()[0].decode("utf-8")
@@ -81,7 +82,9 @@ if __name__ == "__main__":
                         help="path to code root")
 
     args = parser.parse_args()
-    all_scores = compute_bleus(args, [e+1 for e in range(args.epoch)], args.valid_split) 
+    print("args", args)
+    all_scores = compute_bleus(args, [e+1 for e in range(args.epoch)], args.valid_split)
+    print("all_scores: ", all_scores)
 
     decode_script = os.path.join(args.code_root, "evaluation/decode_all.py")
     lgs = args.lgs.split("-")

@@ -56,14 +56,12 @@ fairseq.egg-info/entry_points.txt
 fairseq.egg-info/not-zip-safe
 fairseq.egg-info/requires.txt
 fairseq.egg-info/top_level.txt
-fairseq/clib/libbleu/libbleu.cpp
-fairseq/clib/libbleu/module.cpp
-fairseq/data/data_utils_fast.pyx
-fairseq/data/token_block_utils_fast.pyx
 fairseq/benchmark/__init__.py
 fairseq/benchmark/dummy_lm.py
 fairseq/benchmark/dummy_masked_lm.py
 fairseq/benchmark/dummy_model.py
+fairseq/clib/libbleu/libbleu.cpp
+fairseq/clib/libbleu/module.cpp
 fairseq/criterions/__init__.py
 fairseq/criterions/adaptive_loss.py
 fairseq/criterions/binary_cross_entropy.py
@@ -85,6 +83,7 @@ fairseq/data/colorize_dataset.py
 fairseq/data/concat_dataset.py
 fairseq/data/concat_sentences_dataset.py
 fairseq/data/data_utils.py
+fairseq/data/data_utils_fast.pyx
 fairseq/data/denoising_dataset.py
 fairseq/data/dictionary.py
 fairseq/data/fairseq_dataset.py
@@ -118,6 +117,7 @@ fairseq/data/sort_dataset.py
 fairseq/data/strip_token_dataset.py
 fairseq/data/subsample_dataset.py
 fairseq/data/token_block_dataset.py
+fairseq/data/token_block_utils_fast.pyx
 fairseq/data/transform_eos_dataset.py
 fairseq/data/transform_eos_lang_pair_dataset.py
 fairseq/data/truncate_dataset.py
