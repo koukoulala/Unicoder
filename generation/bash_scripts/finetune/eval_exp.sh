@@ -34,14 +34,9 @@ EXP="FINETUNE_NTG_${lg}"
 
 SAVE=${OUTPUT_DIR}/$EXP
 
-# mkdir -p $SAVE
-
-SUFFIX=""
-if [ ! -f $SAVE/checkpoint_last.pt ]; then
-   echo "copy pretrained model to last"
-   cp $PRETRAIN $SAVE/checkpoint_last.pt
-fi
-
+python $CODE_ROOT/evaluation/decode_all.py --task $task --beam 5 --start 1 --ngpu ${NGPU} --epoch ${mepoch} \
+           --split valid --exp $EXP --data_path $DATA_BIN --spe $SPE --save_dir $OUTPUT_DIR --dataset NTG \
+           --code_root $CODE_ROOT
 
 python $CODE_ROOT/evaluation/eval_exp.py --task $task --test_beam 10 --ngpu ${NGPU} --epoch ${mepoch} \
            --exp $EXP --data_path $DATA_BIN --ref_folder $DATA_REF \

@@ -7,7 +7,7 @@ import sys
 import argparse
 import subprocess
 import numpy as np
-
+import sacrebleu
 
 def compute_bleus(args, epochs, split):
     all_scores = {}
@@ -15,7 +15,7 @@ def compute_bleus(args, epochs, split):
     ref_folder = args.ref_folder
     for e in epochs:
         fd = os.path.join(args.save_dir, 
-                          "decodes/{}/checkpoint{}/{}".format(args.exp, e, split)) 
+                          "decodes/{}/checkpoint{}/{}".format(args.exp, e, split))
         scores = {}
         for lg in lgs:
             fs = os.path.join(fd, "{}_tgt.{}.hyp".format(lg, split))
@@ -38,6 +38,23 @@ def compute_bleus(args, epochs, split):
         if len(scores) > 0:
             all_scores[e] = scores
     return all_scores
+
+
+def load_qg_ntg_data(pred_file, label_dir, task, lg):
+    types_of_encoding = ["utf8", "cp1252"]
+    label_file = os.path.join(label_dir, "{0}/xglue.{1}.{2}.tgt.{3}".format(task, task.lower(), lg, args.split))
+
+    preds, labels = [], []
+    last_query = ""
+    for encoding_type in types_of_encoding:
+        for item in open(pred_file, encoding=encoding_type, errors='replace'):
+            preds.append(item.strip())
+
+        for item in open(label_file, encoding=encoding_type, errors='replace'):
+            last_query = item.split("\t")[0]
+            labels.append(item.split("\t")[-1].strip())
+
+    return np.array(preds), np.array(labels)
 
 
 if __name__ == "__main__":
@@ -79,9 +96,12 @@ if __name__ == "__main__":
                         help="dir to save all checkpoints and decoded results")
     parser.add_argument("--code_root", type=str,
                         help="path to code root")
+    parser.add_argument("--data_root", type=str,
+                        help="path to original data")
 
     args = parser.parse_args()
-    all_scores = compute_bleus(args, [e+1 for e in range(args.epoch)], args.valid_split) 
+    all_scores = compute_bleus(args, [e+1 for e in range(args.epoch)], args.valid_split)
+    print("all_scores: ", all_scores)
 
     decode_script = os.path.join(args.code_root, "evaluation/decode_all.py")
     lgs = args.lgs.split("-")
@@ -150,6 +170,7 @@ if __name__ == "__main__":
     if not os.path.exists(fd):
         os.makedirs(fd)
     print()
+    results = {}
     for lg in lgs:
         pred_f = os.path.join(args.save_dir, 
                 "decodes/{}/checkpoint{}/{}".format(args.exp, best_test[lg], args.test_split),
@@ -157,5 +178,18 @@ if __name__ == "__main__":
         dest_f = os.path.join(fd, "{}.prediction".format(lg))
         os.system("cp {} {}".format(pred_f, dest_f))
         print("Save {}.prediction to {}".format(lg, dest_f))
+
+        # get test results
+        preds, labels = load_qg_ntg_data(dest_f, args.data_root, "NTG", lg)
+        results[lg] = sacrebleu.corpus_bleu(preds, [labels], lowercase=True).score / 100  # Normalize
+
+    avg = 0
+    count = 0
+    for key in results.keys():
+        avg += results[key]
+        count += 1
+    avg /= count
+    results["avg"] = avg
+    print("Test results:", results)
 
     print("Done!")

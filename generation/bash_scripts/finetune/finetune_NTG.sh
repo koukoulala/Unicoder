@@ -92,4 +92,5 @@ python $CODE_ROOT/evaluation/decode_all.py --task $task --beam 5 --start 1 --ngp
 python $CODE_ROOT/evaluation/eval_exp.py --task $task --test_beam 10 --ngpu ${NGPU} --epoch ${mepoch} \
            --exp $EXP --data_path $DATA_BIN --ref_folder $DATA_REF \
            --lgs en-fr-es-ru-de --supervised_lg $lg --spe $SPE --save_dir $OUTPUT_DIR --dataset NTG \
-           --code_root $CODE_ROOT
+           --code_root $CODE_ROOT --data_root $DATA_ROOT
+
