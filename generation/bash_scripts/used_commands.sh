@@ -23,3 +23,6 @@ python bash_scripts/deal_data/try_2.py --source_file=../../../Datasets/NTG_aug/x
 python bash_scripts/deal_data/translate_lang.py --source_file=../../../Datasets/NTG_aug/xglue.ntg.en.tgt.test  --target_file=../../../Datasets/NTG_aug/xglue.ntg.en.tgt.test_trans  --final_file=../../../Datasets/NTG_aug/xglue.ntg.en.tgt.test_aug --source_lang=en --target_lang=de
 python bash_scripts/deal_data/try_2.py --source_file=../../../Datasets/NTG_aug/xglue.ntg.en.src.test  --target_file=../../../Datasets/NTG_aug/xglue.ntg.en.src.test_trans  --final_file=../../../Datasets/NTG_aug/xglue.ntg.en.src.test_aug --source_lang=en --target_lang=de
 python bash_scripts/deal_data/try_trans.py --source_file=../../../Datasets/NTG_aug/en_src_train.txt  --target_file=../../../Datasets/NTG_aug/en_src_train_trans.txt  --source_lang=en --target_lang=de
+
+# on 8002
+nohup python -u bash_scripts/deal_data/try_trans_iter.py --source_file=../../datasets/NTG_aug/en_src_train.txt  --target_file=../../../Datasets/NTG_aug/en_src_train_trans.txt  --source_lang=en --target_lang=de

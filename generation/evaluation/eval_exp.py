@@ -101,10 +101,7 @@ if __name__ == "__main__":
                         help="path to original data")
 
     args = parser.parse_args()
-<<<<<<< HEAD
-    print("args", args)
-=======
->>>>>>> 38771f276fc39a5591a83695b539b2c57673f99f
+
     all_scores = compute_bleus(args, [e+1 for e in range(args.epoch)], args.valid_split)
     print("all_scores: ", all_scores)
 

@@ -34,12 +34,6 @@ EXP="FINETUNE_NTG_${lg}"
 
 SAVE=${OUTPUT_DIR}/$EXP
 
-<<<<<<< HEAD
-mkdir -p $SAVE
-
-
-=======
->>>>>>> 38771f276fc39a5591a83695b539b2c57673f99f
 python $CODE_ROOT/evaluation/decode_all.py --task $task --beam 5 --start 1 --ngpu ${NGPU} --epoch ${mepoch} \
            --split valid --exp $EXP --data_path $DATA_BIN --spe $SPE --save_dir $OUTPUT_DIR --dataset NTG \
            --code_root $CODE_ROOT
