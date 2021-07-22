@@ -63,8 +63,6 @@ if __name__ == "__main__":
                         help="split")
     parser.add_argument("--target_lang", type=str, default="de",
                         help="target_lang")
-    parser.add_argument("--start", type=int, default=0,
-                        help="start file number")
     args = parser.parse_args()
 
     source_file = os.path.join(args.root_path, "sampled_xglue.ntg.en." + args.split + ".train")

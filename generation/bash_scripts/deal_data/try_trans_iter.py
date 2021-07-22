@@ -69,7 +69,7 @@ if __name__ == "__main__":
 
     all_badcase = {}
     for i in range(args.start, 6):
-        s = "%02d" % i
+        s = "%01d" % i
         source_file = os.path.join(args.root_path, "sampled_xglue.ntg.en." + args.split + ".train_" + s)
         target_file = os.path.join(args.root_path, "sampled_xglue.ntg." + args.target_lang + "." + args.split + ".train_" + s)
         target_lang = args.target_lang
