@@ -18,7 +18,7 @@ def main(root_path, source_file, target_file, target_lang):
         for line in f:
             if num % 50 == 0:
                 print('now dealing %s', num)
-            line = line.strip()
+            # line = line.strip()
             try:
                 target_line = translator.translate(line, dest=target_lang).text
             except Exception as e:
