@@ -19,28 +19,14 @@ def main(root_path, source_file, target_file, target_lang):
             if num % 50 == 0:
                 print('now dealing %s', num)
             line = line.strip()
-            if len(line) > 4891:
-                print("using doc translation")
-                tmp_file = open(os.path.join(root_path, 'tmp.txt'), 'w', encoding='utf-8')
-                tmp_file.write(line)
-                tmp_file.close()
-                try:
-                    target_line = translator.bulktranslate(os.path.join(root_path, 'tmp.txt'), dest=target_lang).text
-                except Exception as e:
-                    print("error: ", num, len(line), e)
-                    bad_case.append(num)
-                    file2.write('\n')
-                    num += 1
-                    continue
-            else:
-                try:
-                    target_line = translator.translate(line, dest=target_lang).text
-                except Exception as e:
-                    print("error: ", num, len(line), e)
-                    bad_case.append(num)
-                    file2.write('\n')
-                    num += 1
-                    continue
+            try:
+                target_line = translator.translate(line, dest=target_lang).text
+            except Exception as e:
+                print("error: ", num, len(line), e)
+                bad_case.append(num)
+                file2.write('\n')
+                num += 1
+                continue
 
             if len(line) != 0 and len(target_line) != 0:
                 file2.write(target_line + '\n')

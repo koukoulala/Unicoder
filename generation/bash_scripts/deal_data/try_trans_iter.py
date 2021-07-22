@@ -27,7 +27,7 @@ def main(root_path, source_file, target_file, target_lang):
                 try:
                     target_line = translator.bulktranslate(os.path.join(root_path, 'tmp.txt'), dest=target_lang).text
                 except Exception as e:
-                    print("error: ", num, len(line), e)
+                    print("error doc translation: ", num, len(line), e)
                     bad_case.append(num)
                     file2.write('\n')
                     num += 1
