@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a7952b7-43f5-43d8-9ed7-12ed51c4ef17" name="Default Changelist" comment="" />
+    <list default="true" id="7a7952b7-43f5-43d8-9ed7-12ed51c4ef17" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/generation/bash_scripts/deal_data/sample_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../covid19_detection/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generation/bash_scripts/deal_data/try_trans_iter.py" beforeDir="false" afterPath="$PROJECT_DIR$/generation/bash_scripts/deal_data/try_trans_iter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generation/bash_scripts/used_commands.sh" beforeDir="false" afterPath="$PROJECT_DIR$/generation/bash_scripts/used_commands.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generation/log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generation/log_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generation/bash_scripts/deal_data/process_trans.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../covid19_detection/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../covid19_detection/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +27,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1tylvKxbv95zVGJmG9n6N5vpOtU" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -27,7 +38,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/generation/bash_scripts/deal_data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../covid19_detection" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
@@ -100,7 +111,7 @@
       <updated>1623749439503</updated>
       <workItem from="1623749442090" duration="9000" />
       <workItem from="1626838290062" duration="11164000" />
-      <workItem from="1626861644476" duration="9733000" />
+      <workItem from="1626861644476" duration="19246000" />
     </task>
     <servers />
   </component>

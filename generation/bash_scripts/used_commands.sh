@@ -26,3 +26,7 @@ python bash_scripts/deal_data/try_trans.py --source_file=../../../Datasets/NTG_a
 
 # on 8002
 nohup python -u bash_scripts/deal_data/try_trans_iter.py --source_file=../../datasets/trans/en_src_train  --target_file=../../datasets/trans/en_src_train_trans  --source_lang=en --target_lang=de &> try.out &
+
+# 7.22
+split -l 5000 sampled_xglue.ntg.en.src.train -d -a 1 sampled_xglue.ntg.en.src.train_
+split -l 5000 sampled_xglue.ntg.en.tgt.train -d -a 1 sampled_xglue.ntg.en.tgt.train_
