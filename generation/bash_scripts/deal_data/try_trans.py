@@ -2,11 +2,10 @@ from pygoogletranslation import Translator
 import argparse
 import numpy as np
 import os
-from googletrans import Translator
-from googletrans.utils import format_json
+from googletrans import Translator as TransGoogle
 
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-translator_2 = Translator(service_urls=['translate.google.cn'])
+translator_2 = TransGoogle(service_urls=['translate.google.cn'])
 
 
 def main(root_path, source_file, target_file, target_lang):

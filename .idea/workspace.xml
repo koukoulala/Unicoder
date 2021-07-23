@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7a7952b7-43f5-43d8-9ed7-12ed51c4ef17" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../covid19_detection/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generation/bash_scripts/deal_data/try_trans.py" beforeDir="false" afterPath="$PROJECT_DIR$/generation/bash_scripts/deal_data/try_trans.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generation/bash_scripts/used_commands.sh" beforeDir="false" afterPath="$PROJECT_DIR$/generation/bash_scripts/used_commands.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generation/evaluation/XGLUE_test/NTG/de.prediction" beforeDir="false" afterPath="$PROJECT_DIR$/generation/evaluation/XGLUE_test/NTG/de.prediction" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generation/evaluation/XGLUE_test/NTG/en.prediction" beforeDir="false" afterPath="$PROJECT_DIR$/generation/evaluation/XGLUE_test/NTG/en.prediction" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generation/evaluation/XGLUE_test/NTG/es.prediction" beforeDir="false" afterPath="$PROJECT_DIR$/generation/evaluation/XGLUE_test/NTG/es.prediction" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generation/evaluation/XGLUE_test/NTG/fr.prediction" beforeDir="false" afterPath="$PROJECT_DIR$/generation/evaluation/XGLUE_test/NTG/fr.prediction" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generation/evaluation/XGLUE_test/NTG/ru.prediction" beforeDir="false" afterPath="$PROJECT_DIR$/generation/evaluation/XGLUE_test/NTG/ru.prediction" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../covid19_detection/.idea/covid19_detection.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../covid19_detection/.idea/covid19_detection.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../covid19_detection/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../covid19_detection/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../py-googletranslation/pygoogletranslation/translate.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py-googletranslation/pygoogletranslation/translate.py" afterDir="false" />
@@ -125,7 +118,7 @@
       <workItem from="1626861644476" duration="22593000" />
       <workItem from="1627013624049" duration="620000" />
       <workItem from="1627019328216" duration="622000" />
-      <workItem from="1627027542005" duration="8541000" />
+      <workItem from="1627027542005" duration="8928000" />
     </task>
     <servers />
   </component>
