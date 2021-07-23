@@ -31,3 +31,4 @@ nohup python -u bash_scripts/deal_data/try_trans_iter.py --source_file=../../dat
 split -l 5000 sampled_xglue.ntg.en.src.train -d -a 1 sampled_xglue.ntg.en.src.train_
 split -l 5000 sampled_xglue.ntg.en.tgt.train -d -a 1 sampled_xglue.ntg.en.tgt.train_
 nohup python -u bash_scripts/deal_data/try_trans_iter.py --root_path=../../datasets/trans/  --split=src --target_lang=de --start=0 &> try_iter.out &
+nohup python -u bash_scripts/deal_data/try_trans.py --root_path=../../datasets/trans/  --split=src --target_lang=de &> logs/trans_src_de.out &

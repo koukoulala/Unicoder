@@ -2,6 +2,12 @@ from pygoogletranslation import Translator
 import argparse
 import numpy as np
 import os
+from googletrans import Translator
+from googletrans.utils import format_json
+
+headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+translator_2 = Translator(service_urls=['translate.google.cn'])
+
 
 def main(root_path, source_file, target_file, target_lang):
     NO_OF_ATTEMPTS=10
@@ -19,14 +25,20 @@ def main(root_path, source_file, target_file, target_lang):
             if num % 50 == 0:
                 print('now dealing %s', num)
             # line = line.strip()
+            if len(line) > 4000:
+                line = line[:4000]
             try:
                 target_line = translator.translate(line, dest=target_lang).text
             except Exception as e:
                 print("error: ", num, len(line), e)
-                bad_case.append(num)
-                file2.write('\n')
-                num += 1
-                continue
+                try:
+                    target_line = translator_2.translate(line, src="en", dest=target_lang).text
+                except Exception as e:
+                    print("still error: ", num, len(line), e)
+                    bad_case.append(num)
+                    file2.write('\n')
+                    num += 1
+                    continue
 
             if len(line) != 0 and len(target_line) != 0:
                 file2.write(target_line + '\n')
