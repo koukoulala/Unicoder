@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../AdCreative_Modeling/.idea/AdCreative_Modeling.iml" filepath="$PROJECT_DIR$/../AdCreative_Modeling/.idea/AdCreative_Modeling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../R2Gen/.idea/R2Gen.iml" filepath="$PROJECT_DIR$/../R2Gen/.idea/R2Gen.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Unicoder.iml" filepath="$PROJECT_DIR$/.idea/Unicoder.iml" />
       <module fileurl="file://$PROJECT_DIR$/../covid19_detection/.idea/covid19_detection.iml" filepath="$PROJECT_DIR$/../covid19_detection/.idea/covid19_detection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../fairseq/.idea/fairseq.iml" filepath="$PROJECT_DIR$/../fairseq/.idea/fairseq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../file_upload_download/.idea/file_upload_download.iml" filepath="$PROJECT_DIR$/../file_upload_download/.idea/file_upload_download.iml" />
       <module fileurl="file://$PROJECT_DIR$/../py-googletranslation/.idea/py-googletranslation.iml" filepath="$PROJECT_DIR$/../py-googletranslation/.idea/py-googletranslation.iml" />
     </modules>
   </component>

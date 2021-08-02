@@ -19,7 +19,7 @@ mkdir -p $DATA_REF
 # Save references
 
 for lg in en es fr de it pt; do
-    cp ${DATA}/xglue.qg.$lg.tgt.dev ${DATA_REF}/$lg.tgt.valid 
+    cp ${DATA}/xglue.qg.$lg.tgt.dev ${DATA_REF}/$lg.tgt.valid
 done
 
 

@@ -6,6 +6,10 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="covid19_detection" />
     <orderEntry type="module" module-name="py-googletranslation" />
+    <orderEntry type="module" module-name="AdCreative_Modeling" />
+    <orderEntry type="module" module-name="fairseq" />
+    <orderEntry type="module" module-name="file_upload_download" />
+    <orderEntry type="module" module-name="R2Gen" />
   </component>
   <component name="PyDocumentationSettings">
     <option name="format" value="PLAIN" />

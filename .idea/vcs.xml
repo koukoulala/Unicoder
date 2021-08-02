@@ -2,6 +2,10 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../AdCreative_Modeling" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../R2Gen" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../fairseq" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../file_upload_download" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../py-googletranslation" vcs="Git" />
   </component>
 </project>

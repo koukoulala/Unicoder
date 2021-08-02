@@ -43,7 +43,7 @@ def compute_bleus(args, epochs, split):
 
 def load_qg_ntg_data(pred_file, label_dir, task, lg):
     types_of_encoding = ["utf8", "cp1252"]
-    label_file = os.path.join(label_dir, "{0}/xglue.{1}.{2}.tgt.{3}".format(task, task.lower(), lg, args.split))
+    label_file = os.path.join(label_dir, "xglue.{0}.{1}.tgt.{2}".format(task.lower(), lg, args.test_split))
 
     preds, labels = [], []
     last_query = ""
